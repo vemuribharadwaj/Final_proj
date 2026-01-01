@@ -17,7 +17,7 @@ public class CustomerController
     private CustomerService customerService;
 
     @PostMapping("/register")
-    public ResponseEntity registerCustomer(@RequestBody Customer customer)
+    public ResponseEntity<Customer> registerCustomer(@RequestBody Customer customer)
     {
           Customer saved = customerService.enrollCustomer(customer);
             return ResponseEntity.ok(saved);
